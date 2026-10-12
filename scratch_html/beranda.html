@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portal Publik DPM FPP - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#cea700",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#00714d",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#005ac2",
+                        "inverse-primary": "#adc6ff",
+                        "leaf-soft": "#D1FAE5",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-variant": "#e0e3e5",
+                        "primary": "#0058be",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#4e3e00",
+                        "sky-light": "#BAE6FD",
+                        "secondary-fixed": "#6ffbbe",
+                        "tertiary": "#735c00",
+                        "tertiary-fixed-dim": "#eec200",
+                        "on-background": "#191c1e",
+                        "on-surface": "#191c1e",
+                        "on-surface-variant": "#424754",
+                        "on-secondary-fixed-variant": "#005236",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#001a42",
+                        "primary-container": "#2170e4",
+                        "secondary-container": "#6cf8bb",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface-dim": "#d8dadc",
+                        "on-primary-fixed-variant": "#004395",
+                        "surface-bright": "#f7f9fb",
+                        "surface": "#f7f9fb",
+                        "outline": "#727785",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "surface-container-high": "#e6e8ea",
+                        "surface-container": "#eceef0",
+                        "on-tertiary-fixed": "#231b00",
+                        "agriculture-green": "#10B981",
+                        "fisheries-blue": "#3B82F6",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-primary-container": "#fefcff",
+                        "secondary-fixed-dim": "#4edea3",
+                        "tertiary-fixed": "#ffe083",
+                        "on-error": "#ffffff",
+                        "background": "#f7f9fb",
+                        "secondary": "#006c49",
+                        "on-secondary-fixed": "#002113",
+                        "primary-fixed-dim": "#adc6ff",
+                        "ink-depth": "#0F172A",
+                        "outline-variant": "#c2c6d6",
+                        "surface-container-low": "#f2f4f6",
+                        "glass-surface": "rgba(255, 255, 255, 0.85)"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "pill-padding-x": "1.5rem",
+                        "section-padding": "5rem",
+                        "bento-gap": "1.5rem",
+                        "grid-gutter": "1.5rem",
+                        "pill-padding-y": "0.75rem",
+                        "grid-margin": "2rem"
+                    },
+                    "fontFamily": {
+                        "stat-number": ["Montserrat"],
+                        "label-caps": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "display-hero-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "display-hero": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "stat-number": ["48px", { "lineHeight": "1", "fontWeight": "800" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "display-hero-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "display-hero": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800" }]
+                    },
+                    "animation": {
+                        "marquee": "marquee 25s linear infinite",
+                    },
+                    "keyframes": {
+                        "marquee": {
+                            "0%": { transform: "translateX(0%)" },
+                            "100%": { transform: "translateX(-100%)" }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #f7f9fb;
+            overflow-x: hidden;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="text-on-background font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation -->
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] rounded-full z-50 bg-glass-surface dark:bg-inverse-surface/80 backdrop-blur-xl shadow-xl border border-white/20 transition-all duration-300">
+<div class="flex justify-between items-center px-8 py-3 w-full max-w-7xl mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">
+                DPM FPP
+            </div>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md hover:scale-105 transition-transform duration-200" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md hover:scale-105 transition-transform duration-200" href="#">About Us</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md hover:scale-105 transition-transform duration-200" href="#">Work Programs</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md hover:scale-105 transition-transform duration-200" href="#">Aspirations</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md hover:scale-105 transition-transform duration-200" href="#">LPJ</a>
+</div>
+<div class="hidden md:block">
+<button class="bg-primary text-on-primary px-pill-padding-x py-pill-padding-y rounded-full font-label-caps text-label-caps hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-md active:scale-95">Contact Us</button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-section-padding px-grid-margin min-h-[921px] flex flex-col justify-center overflow-hidden">
+<!-- Background Gradient -->
+<div class="absolute inset-0 bg-gradient-to-br from-fisheries-blue/20 via-surface-bright to-agriculture-green/20 -z-10"></div>
+<!-- Decorative Blobs -->
+<div class="absolute top-20 -left-32 w-96 h-96 bg-fisheries-blue/30 rounded-full mix-blend-multiply filter blur-[100px] opacity-70 animate-blob -z-10"></div>
+<div class="absolute top-40 -right-32 w-96 h-96 bg-agriculture-green/30 rounded-full mix-blend-multiply filter blur-[100px] opacity-70 animate-blob animation-delay-2000 -z-10"></div>
+<div class="max-w-5xl mx-auto text-center w-full z-10 relative">
+<h1 class="font-display-hero-mobile md:font-display-hero text-display-hero-mobile md:text-display-hero text-ink-depth mb-6 max-w-4xl mx-auto">
+                    Wujudkan Kampus FPP yang <span class="text-transparent bg-clip-text bg-gradient-to-r from-fisheries-blue to-agriculture-green">Transparan</span> dan <span class="text-transparent bg-clip-text bg-gradient-to-r from-agriculture-green to-secondary">Aspiratif</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">
+                    Platform digital interaktif Dewan Perwakilan Mahasiswa Fakultas Perikanan dan Ilmu Kelautan serta Pertanian. Suarakan aspirasimu, pantau kinerja, dan wujudkan perubahan bersama.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-label-caps text-label-caps hover:bg-primary-container hover:text-on-primary-container transition-all shadow-lg hover:shadow-xl active:scale-95 flex items-center gap-2">
+<span>Suarakan Aspirasi</span>
+<span class="material-symbols-outlined text-[18px]">campaign</span>
+</button>
+<button class="glass-panel text-primary px-8 py-4 rounded-full font-label-caps text-label-caps hover:bg-surface-container transition-all shadow-sm hover:shadow-md active:scale-95">
+                        Lihat Program Kerja
+                    </button>
+</div>
+</div>
+<!-- Auto-scrolling Marquee -->
+<div class="mt-20 w-full overflow-hidden relative">
+<!-- Fade Edges -->
+<div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#f7f9fb] to-transparent z-10 pointer-events-none"></div>
+<div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#f7f9fb] to-transparent z-10 pointer-events-none"></div>
+<div class="flex animate-marquee gap-6 whitespace-nowrap hover:pause-animation py-4">
+<!-- Aspiration Card 1 -->
+<div class="glass-panel rounded-lg p-6 min-w-[300px] shadow-sm transform -rotate-1 hover:rotate-0 transition-transform duration-300 flex-shrink-0">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-agriculture-green text-on-primary px-3 py-1 rounded-full font-label-caps text-[10px]">Pertanian</span>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Selesai
+                            </span>
+</div>
+<p class="font-body-md text-sm text-ink-depth whitespace-normal line-clamp-3">"Perbaikan fasilitas laboratorium pasca panen sangat membantu praktikum kami."</p>
+</div>
+<!-- Aspiration Card 2 -->
+<div class="glass-panel rounded-lg p-6 min-w-[300px] shadow-sm transform rotate-1 hover:rotate-0 transition-transform duration-300 flex-shrink-0">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-fisheries-blue text-on-primary px-3 py-1 rounded-full font-label-caps text-[10px]">Perikanan</span>
+<span class="bg-tertiary-container text-on-tertiary-container px-2 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">forward</span> Diteruskan
+                            </span>
+</div>
+<p class="font-body-md text-sm text-ink-depth whitespace-normal line-clamp-3">"Mohon penambahan jam akses perpustakaan fakultas menjelang UAS."</p>
+</div>
+<!-- Aspiration Card 3 -->
+<div class="glass-panel rounded-lg p-6 min-w-[300px] shadow-sm transform -rotate-1 hover:rotate-0 transition-transform duration-300 flex-shrink-0">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-outline text-on-primary px-3 py-1 rounded-full font-label-caps text-[10px]">Umum</span>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Selesai
+                            </span>
+</div>
+<p class="font-body-md text-sm text-ink-depth whitespace-normal line-clamp-3">"Pengadaan tempat sampah organik dan anorganik terpisah di area kantin."</p>
+</div>
+<!-- Aspiration Card 4 -->
+<div class="glass-panel rounded-lg p-6 min-w-[300px] shadow-sm transform rotate-1 hover:rotate-0 transition-transform duration-300 flex-shrink-0">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-agriculture-green text-on-primary px-3 py-1 rounded-full font-label-caps text-[10px]">Pertanian</span>
+<span class="bg-tertiary-container text-on-tertiary-container px-2 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">forward</span> Diteruskan
+                            </span>
+</div>
+<p class="font-body-md text-sm text-ink-depth whitespace-normal line-clamp-3">"Usulan pelatihan software pemetaan lahan untuk mahasiswa semester 5."</p>
+</div>
+<!-- Duplicate for infinite loop illusion -->
+<div class="glass-panel rounded-lg p-6 min-w-[300px] shadow-sm transform -rotate-1 hover:rotate-0 transition-transform duration-300 flex-shrink-0">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-agriculture-green text-on-primary px-3 py-1 rounded-full font-label-caps text-[10px]">Pertanian</span>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Selesai
+                            </span>
+</div>
+<p class="font-body-md text-sm text-ink-depth whitespace-normal line-clamp-3">"Perbaikan fasilitas laboratorium pasca panen sangat membantu praktikum kami."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Box Stats Section -->
+<section class="py-section-padding px-grid-margin bg-surface-container-low relative">
+<div class="max-w-7xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-ink-depth mb-12 text-center">Transparansi Kinerja</h2>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-bento-gap">
+<!-- Stat Card 1: Total Aspirations -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-xl p-8 shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-10 -bottom-10 opacity-[0.03] group-hover:opacity-5 transition-opacity duration-500">
+<span class="material-symbols-outlined text-[200px]" style="font-variation-settings: 'FILL' 1;">forum</span>
+</div>
+<div class="z-10 relative">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider block mb-2">Total Aspirasi Diselesaikan</span>
+<div class="flex items-baseline gap-4 mt-4">
+<span class="font-stat-number text-stat-number text-fisheries-blue">342</span>
+<span class="font-body-md text-body-md text-secondary bg-leaf-soft px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> +12% bulan ini
+                                </span>
+</div>
+</div>
+<div class="mt-8 z-10 relative">
+<div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-fisheries-blue to-agriculture-green w-[85%] rounded-full"></div>
+</div>
+<p class="text-xs text-on-surface-variant mt-2 text-right">85% dari total aspirasi masuk</p>
+</div>
+</div>
+<!-- Stat Card 2: Resolution Rate -->
+<div class="md:col-span-4 bg-agriculture-green text-on-primary rounded-xl p-8 shadow-sm flex flex-col justify-center items-center text-center relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
+<div class="z-10 relative">
+<span class="material-symbols-outlined text-4xl mb-4 opacity-80" style="font-variation-settings: 'FILL' 1;">speed</span>
+<span class="font-stat-number text-[56px] font-extrabold leading-none block mb-2">94%</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider opacity-90">Tingkat Resolusi</span>
+<p class="text-sm mt-4 opacity-80">Rata-rata waktu respon: <br/>2x24 Jam</p>
+</div>
+</div>
+<!-- Stat Card 3: Active Programs -->
+<div class="md:col-span-12 bg-surface-container-lowest rounded-xl p-8 shadow-sm flex flex-col md:flex-row justify-between items-center relative overflow-hidden border-l-4 border-secondary">
+<div class="flex items-center gap-6 mb-6 md:mb-0">
+<div class="w-16 h-16 bg-surface-container flex items-center justify-center rounded-full">
+<span class="material-symbols-outlined text-3xl text-secondary" style="font-variation-settings: 'FILL' 1;">work</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider block mb-1">Program Kerja Aktif</span>
+<span class="font-stat-number text-4xl font-extrabold text-ink-depth">18</span>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="bg-surface-container px-4 py-3 rounded-lg text-center">
+<span class="block text-xl font-bold text-fisheries-blue">8</span>
+<span class="text-xs text-on-surface-variant">Perikanan</span>
+</div>
+<div class="bg-surface-container px-4 py-3 rounded-lg text-center">
+<span class="block text-xl font-bold text-agriculture-green">7</span>
+<span class="text-xs text-on-surface-variant">Pertanian</span>
+</div>
+<div class="bg-surface-container px-4 py-3 rounded-lg text-center">
+<span class="block text-xl font-bold text-tertiary">3</span>
+<span class="text-xs text-on-surface-variant">Gabungan</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Carousel Section -->
+<section class="py-section-padding px-grid-margin bg-background relative overflow-hidden">
+<!-- Decorative Blob -->
+<div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-fisheries-blue/10 rounded-full mix-blend-multiply filter blur-[120px] -z-10 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-10">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-ink-depth mb-2">Aksi Nyata DPM FPP</h2>
+<p class="text-on-surface-variant max-w-xl">Dokumentasi dan hasil pelaksanaan program kerja unggulan untuk mewujudkan kesejahteraan mahasiswa.</p>
+</div>
+<div class="hidden md:flex gap-2">
+<button aria-label="Previous slide" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button aria-label="Next slide" class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Carousel Container -->
+<div class="flex overflow-x-auto hide-scrollbar gap-6 snap-x snap-mandatory pb-8 -mx-grid-margin px-grid-margin md:mx-0 md:px-0">
+<!-- Slide 1 -->
+<div class="snap-center shrink-0 w-[85vw] md:w-[60%] lg:w-[50%] h-[400px] rounded-xl relative overflow-hidden group cursor-pointer shadow-sm">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A high-quality, brightly lit photograph showing university students engaged in a lively town hall meeting. The room is modern and airy, with large windows letting in natural light. Students are seated in rows, some holding microphones to ask questions. The atmosphere is professional, engaged, and optimistic, capturing the essence of transparent campus governance." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDMbTmXMm7r-9wFxH0rYhxDppuT0M4NHjjG5tBtzjzblWy9btLDvy2q6WG6mcPIVvJGmsSBIE5cn4teJ5LAaHgg8GMCSKyvayjHaDW-mz5M4RxImQmCDmN38HUqgU8IUZrpJqGR7CPTCqlDt4YzJCSDeq9xnkSypXfEXSmDfx1gycPnAHL1DInYX8uJAiFrGkd2yoYQzU3egVQo2N4kyFbXpWLCD8zQD8TAFS5KO8RTkjxnlESnn26nO3iq91KrI-36BH-ye0lT5hE')"></div>
+<!-- Gradient Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-ink-depth/90 via-ink-depth/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<div class="flex gap-2 mb-3">
+<span class="bg-primary/80 backdrop-blur-sm text-on-primary px-3 py-1 rounded-full text-xs font-semibold">Audiensi Terbuka</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-primary mb-2">Dialog Dekanat &amp; Mahasiswa 2024</h3>
+<p class="text-surface-variant font-body-md text-sm line-clamp-2">Menghasilkan 5 poin kesepakatan terkait perbaikan fasilitas umum fakultas yang akan direalisasikan pada semester gasal.</p>
+</div>
+</div>
+<!-- Slide 2 -->
+<div class="snap-center shrink-0 w-[85vw] md:w-[60%] lg:w-[50%] h-[400px] rounded-xl relative overflow-hidden group cursor-pointer shadow-sm">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A dynamic, well-lit photograph of students participating in an outdoor environmental planting activity. They are planting saplings in a green campus area, wearing casual but coordinated university t-shirts. The lighting is sunny and cheerful, highlighting teamwork and the connection to agriculture and nature. The overall mood is active, collaborative, and environmentally conscious." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCluJUPcV7HBuAzjH_9XDFYPBHFn8QBMdeuA-SY57WfbfsjLNWBZNe5Jt0YYzfP2UatEThsYGXTu76Y8CqwEbqZP4BCaF0kXKfQpGX5V6cXVd2Xez3rfcOsjbSYzap6yGNnhUrpmoLHXr_lDel1tv6qRBEGzCUdFwuOsAlEIPKJniy1u76_wvJhOdqP-uVxlaOwUtlvfRMbdc57kAActDLQxs0LhLx8Detakjyn6bXdQSq2cJsucrE_2VyXgr_v11DwpHyRM5RlfJQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-ink-depth/90 via-ink-depth/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<div class="flex gap-2 mb-3">
+<span class="bg-agriculture-green/80 backdrop-blur-sm text-on-primary px-3 py-1 rounded-full text-xs font-semibold">Pengabdian Masyarakat</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-primary mb-2">Gerakan Tanam Pohon FPP</h3>
+<p class="text-surface-variant font-body-md text-sm line-clamp-2">Kolaborasi BEM dan DPM FPP menanam 500 bibit mangrove dan pohon buah di area pesisir binaan fakultas.</p>
+</div>
+</div>
+<!-- Slide 3 -->
+<div class="snap-center shrink-0 w-[85vw] md:w-[60%] lg:w-[50%] h-[400px] rounded-xl relative overflow-hidden group cursor-pointer shadow-sm">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A focused, professional photograph of a legislative student meeting indoors. Students are sitting around a large conference table, reviewing documents and laptops. The lighting is bright and modern, suggesting transparency and diligence. The room has a contemporary design with subtle university branding. The mood is serious, productive, and focused on policy making." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD1v_lbaNwugb0IVSWuNhYqi5slP0Xcb5lzLSZ0hi-D2lXgQttEwKykt0E8f_Dh5u_NZDs79AOQPVFBpdKk5YhvBLZoys2m1NLYWkpQARO8MQi72F5y_xOlxaI8Ee3PzCq64kRgquMINoGDsKKBJo_J8VeUwbRfE3EnLp8rB7IO88NC1XxyBqW8dcKVq1UOuLr8sz6BLjuXVx3OtOFd3EiF22c4WEMb1RoW3VZXVh5p1PBqM_xFCuwIot3WsMM6uVMZSUDQ8li_Dpg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-ink-depth/90 via-ink-depth/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<div class="flex gap-2 mb-3">
+<span class="bg-tertiary/80 backdrop-blur-sm text-on-tertiary px-3 py-1 rounded-full text-xs font-semibold">Legislasi</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-primary mb-2">Sidang Pleno Paruh Waktu</h3>
+<p class="text-surface-variant font-body-md text-sm line-clamp-2">Pengesahan amandemen AD/ART Keluarga Mahasiswa FPP dan evaluasi kinerja ormawa tingkat fakultas.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-surface-container-low dark:bg-inverse-surface rounded-t-lg mt-12 w-full">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-bento-gap px-grid-margin py-section-padding w-full max-w-7xl mx-auto">
+<div class="flex flex-col gap-4">
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">DPM FPP</span>
+<p class="text-on-surface-variant font-body-md text-sm max-w-xs">
+                    Dewan Perwakilan Mahasiswa<br/>
+                    Fakultas Perikanan dan Ilmu Kelautan serta Pertanian<br/>
+                    Mewujudkan transparansi dan mengawal aspirasi mahasiswa.
+                </p>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-caps text-label-caps text-ink-depth font-bold mb-2">Tautan Cepat</h4>
+<a class="text-on-surface-variant hover:text-secondary font-body-md text-sm transition-all duration-300 hover:underline decoration-secondary underline-offset-4" href="#">News</a>
+<a class="text-on-surface-variant hover:text-secondary font-body-md text-sm transition-all duration-300 hover:underline decoration-secondary underline-offset-4" href="#">Gallery</a>
+<a class="text-on-surface-variant hover:text-secondary font-body-md text-sm transition-all duration-300 hover:underline decoration-secondary underline-offset-4" href="#">Contact</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-caps text-label-caps text-ink-depth font-bold mb-2">Legal</h4>
+<a class="text-on-surface-variant hover:text-secondary font-body-md text-sm transition-all duration-300 hover:underline decoration-secondary underline-offset-4" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-secondary font-body-md text-sm transition-all duration-300 hover:underline decoration-secondary underline-offset-4" href="#">Terms of Service</a>
+</div>
+</div>
+<div class="border-t border-outline-variant/30 px-grid-margin py-6 text-center">
+<p class="font-body-md text-sm text-on-surface-variant">© 2024 DPM FPP. Empowering Student Voices.</p>
+</div>
+</footer>
+<script>
+        // Simple logic to pause marquee on hover for better readability
+        document.addEventListener('DOMContentLoaded', () => {
+            const marqueeContainer = document.querySelector('.animate-marquee');
+            if (marqueeContainer) {
+                marqueeContainer.addEventListener('mouseenter', () => {
+                    marqueeContainer.style.animationPlayState = 'paused';
+                });
+                marqueeContainer.addEventListener('mouseleave', () => {
+                    marqueeContainer.style.animationPlayState = 'running';
+                });
+            }
+        });
+    </script>
+</body></html>

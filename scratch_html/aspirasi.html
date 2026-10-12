@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aspirations - DPM FPP</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#cea700",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#00714d",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#005ac2",
+                        "inverse-primary": "#adc6ff",
+                        "leaf-soft": "#D1FAE5",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-variant": "#e0e3e5",
+                        "primary": "#0058be",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#4e3e00",
+                        "sky-light": "#BAE6FD",
+                        "secondary-fixed": "#6ffbbe",
+                        "tertiary": "#735c00",
+                        "tertiary-fixed-dim": "#eec200",
+                        "on-background": "#191c1e",
+                        "on-surface": "#191c1e",
+                        "on-surface-variant": "#424754",
+                        "on-secondary-fixed-variant": "#005236",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#001a42",
+                        "primary-container": "#2170e4",
+                        "secondary-container": "#6cf8bb",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface-dim": "#d8dadc",
+                        "on-primary-fixed-variant": "#004395",
+                        "surface-bright": "#f7f9fb",
+                        "surface": "#f7f9fb",
+                        "outline": "#727785",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "surface-container-high": "#e6e8ea",
+                        "surface-container": "#eceef0",
+                        "on-tertiary-fixed": "#231b00",
+                        "agriculture-green": "#10B981",
+                        "fisheries-blue": "#3B82F6",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-primary-container": "#fefcff",
+                        "secondary-fixed-dim": "#4edea3",
+                        "tertiary-fixed": "#ffe083",
+                        "on-error": "#ffffff",
+                        "background": "#f7f9fb",
+                        "secondary": "#006c49",
+                        "on-secondary-fixed": "#002113",
+                        "primary-fixed-dim": "#adc6ff",
+                        "ink-depth": "#0F172A",
+                        "outline-variant": "#c2c6d6",
+                        "surface-container-low": "#f2f4f6",
+                        "glass-surface": "rgba(255, 255, 255, 0.85)"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "pill-padding-x": "1.5rem",
+                        "section-padding": "5rem",
+                        "bento-gap": "1.5rem",
+                        "grid-gutter": "1.5rem",
+                        "pill-padding-y": "0.75rem",
+                        "grid-margin": "2rem"
+                    },
+                    "fontFamily": {
+                        "stat-number": ["Montserrat"],
+                        "label-caps": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "display-hero-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "display-hero": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "stat-number": ["48px", { "lineHeight": "1", "fontWeight": "800" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "display-hero-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "display-hero": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800" }]
+                    }
+                }
+            }
+        };
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .bento-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .bento-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .input-focus-ring:focus-within {
+            box-shadow: 0 0 0 2px var(--tw-colors-primary-container);
+            border-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen relative overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] rounded-full bg-glass-surface dark:bg-inverse-surface/80 backdrop-blur-xl shadow-xl z-50">
+<div class="flex justify-between items-center px-8 py-3 w-full max-w-7xl mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed hover:scale-105 transition-transform duration-200 cursor-pointer">
+                DPM FPP
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md hover:scale-105 duration-200 active:scale-95" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md hover:scale-105 duration-200 active:scale-95" href="#">About Us</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md hover:scale-105 duration-200 active:scale-95" href="#">Work Programs</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md flex-col hover:scale-105 duration-200 active:scale-95" href="#">Aspirations</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md hover:scale-105 duration-200 active:scale-95" href="#">LPJ</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-pill-padding-x py-pill-padding-y rounded-full font-label-caps text-label-caps hover:scale-105 transition-transform duration-200 active:scale-95 hidden md:block">
+                Contact Us
+            </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-32 pb-section-padding px-grid-margin max-w-7xl mx-auto">
+<!-- Header -->
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h1 class="font-display-hero-mobile text-display-hero-mobile md:font-display-hero md:text-display-hero text-ink-depth mb-4">Suara Mahasiswa</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Your voice matters. Submit your aspirations, ideas, or concerns directly to the legislative body. Let's shape FPP together.
+                </p>
+</div>
+<a class="inline-flex items-center gap-2 bg-surface-container-high hover:bg-surface-variant text-on-surface px-6 py-3 rounded-full transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">search</span>
+<span class="font-label-caps text-label-caps">Track My Aspiration Status</span>
+</a>
+</div>
+<!-- Two Column Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-bento-gap">
+<!-- Left: Form (Span 5) -->
+<div class="lg:col-span-5 relative z-10">
+<div class="glass-panel rounded-xl p-8 sticky top-32 shadow-xl">
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Submit Aspiration</h2>
+<form class="space-y-5" id="aspirationForm">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant block">Full Name</label>
+<input class="w-full bg-surface-bright border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md focus:outline-none input-focus-ring transition-shadow text-on-surface" placeholder="e.g., John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant block">NIM</label>
+<input class="w-full bg-surface-bright border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md focus:outline-none input-focus-ring transition-shadow text-on-surface" placeholder="e.g., 23010121..." type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant block">Study Program (Prodi)</label>
+<div class="relative">
+<select class="w-full bg-surface-bright border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md focus:outline-none input-focus-ring transition-shadow appearance-none text-on-surface">
+<option disabled="" selected="" value="">Select your program...</option>
+<option value="akuakultur">Akuakultur</option>
+<option value="ilmukelautan">Ilmu Kelautan</option>
+<option value="oseanografi">Oseanografi</option>
+<option value="teknologihasilperikanan">Teknologi Hasil Perikanan</option>
+<option value="agribisnis">Agribisnis</option>
+<option value="agroekoteknologi">Agroekoteknologi</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-outline">expand_more</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 bg-surface-container rounded-lg border border-outline-variant">
+<span class="font-body-md text-body-md text-on-surface">Hide My Study Program</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant block">Category</label>
+<div class="flex flex-wrap gap-2">
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="category" type="radio"/>
+<span class="inline-block px-4 py-2 rounded-full border border-outline-variant font-label-caps text-label-caps text-on-surface peer-checked:bg-primary-container peer-checked:text-on-primary-container peer-checked:border-transparent transition-colors">Academic</span>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="category" type="radio"/>
+<span class="inline-block px-4 py-2 rounded-full border border-outline-variant font-label-caps text-label-caps text-on-surface peer-checked:bg-primary-container peer-checked:text-on-primary-container peer-checked:border-transparent transition-colors">Facilities</span>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="category" type="radio"/>
+<span class="inline-block px-4 py-2 rounded-full border border-outline-variant font-label-caps text-label-caps text-on-surface peer-checked:bg-primary-container peer-checked:text-on-primary-container peer-checked:border-transparent transition-colors">Student Affairs</span>
+</label>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant block">Message</label>
+<textarea class="w-full bg-surface-bright border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md focus:outline-none input-focus-ring transition-shadow resize-none text-on-surface" placeholder="Detail your aspiration here..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary rounded-full py-4 font-label-caps text-label-caps hover:bg-primary-container hover:shadow-md transition-all active:scale-[0.98]" onclick="showModal()" type="button">
+                            Submit Aspiration
+                        </button>
+</form>
+</div>
+</div>
+<!-- Right: Feed (Span 7) -->
+<div class="lg:col-span-7 space-y-6">
+<!-- Feed Controls -->
+<div class="flex justify-between items-center pb-2 border-b border-surface-container-high">
+<h3 class="font-headline-md text-headline-md text-ink-depth">Recent Aspirations</h3>
+<div class="flex gap-2">
+<button class="p-2 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface transition-colors">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+</div>
+<!-- Feed Cards Container -->
+<div class="space-y-6">
+<!-- Card 1: Selesai -->
+<div class="bento-card bg-surface-container-lowest rounded-xl p-6 border border-surface-container">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-agriculture-green/20 flex items-center justify-center text-agriculture-green">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+</div>
+<div>
+<div class="font-label-caps text-label-caps text-on-surface font-semibold">Mahasiswa Agribisnis</div>
+<div class="text-xs text-on-surface-variant mt-0.5">2 days ago • Academic</div>
+</div>
+</div>
+<span class="px-3 py-1 bg-leaf-soft text-secondary rounded-full font-label-caps text-label-caps flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Selesai
+                            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-4">
+                            Sistem presensi SIAP sering down saat jam sibuk, terutama pagi hari. Mohon dikoordinasikan dengan pihak dekanat agar ada toleransi keterlambatan presensi jika server bermasalah.
+                        </p>
+<!-- Reply Box -->
+<div class="bg-primary-fixed/50 rounded-lg p-4 border-l-4 border-primary">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">admin_panel_settings</span>
+<span class="font-label-caps text-label-caps text-primary font-bold">DPM Response</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">
+                                Terima kasih atas aspirasinya. Kami telah melakukan audiensi dengan Wakil Dekan I, dan disepakati akan ada masa tenggang 15 menit jika terbukti server SIAP mengalami gangguan massal. Surat edaran resmi sedang diproses.
+                            </p>
+</div>
+</div>
+<!-- Card 2: Diproses -->
+<div class="bento-card bg-surface-container-lowest rounded-xl p-6 border border-surface-container">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">incognito</span>
+</div>
+<div>
+<div class="font-label-caps text-label-caps text-on-surface font-semibold">Mahasiswa FPP</div>
+<div class="text-xs text-on-surface-variant mt-0.5">5 days ago • Facilities</div>
+</div>
+</div>
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full font-label-caps text-label-caps flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">pending</span> Diproses
+                            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+                            Kondisi toilet di gedung B lantai 2 sering kekurangan air dan beberapa kunci pintu rusak. Mohon segera diperbaiki karena sangat mengganggu kenyamanan.
+                        </p>
+</div>
+<!-- Card 3: Diteruskan -->
+<div class="bento-card bg-surface-container-lowest rounded-xl p-6 border border-surface-container">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-fisheries-blue/20 flex items-center justify-center text-fisheries-blue">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+</div>
+<div>
+<div class="font-label-caps text-label-caps text-on-surface font-semibold">Mahasiswa Ilmu Kelautan</div>
+<div class="text-xs text-on-surface-variant mt-0.5">1 week ago • Student Affairs</div>
+</div>
+</div>
+<span class="px-3 py-1 bg-sky-light text-on-primary-fixed-variant rounded-full font-label-caps text-label-caps flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">forward</span> Diteruskan
+                            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+                            Alokasi dana untuk kegiatan UKM di fakultas dirasa kurang merata. Mohon ada transparansi pembagian dana kemahasiswaan.
+                        </p>
+</div>
+<!-- End Cards -->
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-inverse-surface rounded-t-lg mt-12">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-bento-gap px-grid-margin py-section-padding w-full max-w-7xl mx-auto">
+<div>
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed mb-4">DPM FPP</div>
+<p class="text-secondary dark:text-secondary-fixed font-body-md text-body-md">
+                    © 2024 DPM FPP. Empowering Student Voices.
+                </p>
+</div>
+<div class="flex flex-col space-y-2">
+<a class="text-on-surface-variant hover:text-secondary hover:underline decoration-secondary underline-offset-4 transition-all duration-300 font-body-md text-body-md" href="#">News</a>
+<a class="text-on-surface-variant hover:text-secondary hover:underline decoration-secondary underline-offset-4 transition-all duration-300 font-body-md text-body-md" href="#">Gallery</a>
+<a class="text-on-surface-variant hover:text-secondary hover:underline decoration-secondary underline-offset-4 transition-all duration-300 font-body-md text-body-md" href="#">Contact</a>
+</div>
+<div class="flex flex-col space-y-2">
+<a class="text-on-surface-variant hover:text-secondary hover:underline decoration-secondary underline-offset-4 transition-all duration-300 font-body-md text-body-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-secondary hover:underline decoration-secondary underline-offset-4 transition-all duration-300 font-body-md text-body-md" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+<!-- Success Modal (Hidden by default) -->
+<div class="fixed inset-0 z-[100] hidden items-center justify-center p-4" id="successModal">
+<!-- Backdrop -->
+<div class="absolute inset-0 bg-ink-depth/50 backdrop-blur-sm" onclick="hideModal()"></div>
+<!-- Modal Content -->
+<div class="relative bg-surface-container-lowest rounded-xl p-8 max-w-sm w-full shadow-2xl transform scale-95 opacity-0 transition-all duration-300" id="modalContent">
+<div class="w-16 h-16 bg-leaf-soft text-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-[32px]">task_alt</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-center text-ink-depth mb-2">Aspiration Submitted!</h3>
+<p class="font-body-md text-body-md text-center text-on-surface-variant mb-6">
+                Your voice has been securely recorded. Use this tracking code to check its status.
+            </p>
+<div class="bg-surface-container-high rounded-lg p-4 text-center mb-6 border border-outline-variant">
+<div class="font-label-caps text-label-caps text-on-surface-variant mb-1">TRACKING CODE</div>
+<div class="font-stat-number text-[24px] tracking-wider text-primary font-bold">ASP-2026-0143</div>
+</div>
+<button class="w-full bg-primary text-on-primary rounded-full py-3 font-label-caps text-label-caps hover:bg-primary-container transition-colors" onclick="hideModal()">
+                Got it, Thanks
+            </button>
+</div>
+</div>
+<script>
+        function showModal() {
+            const modal = document.getElementById('successModal');
+            const modalContent = document.getElementById('modalContent');
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            
+            // Trigger reflow
+            void modal.offsetWidth;
+            
+            modalContent.classList.remove('scale-95', 'opacity-0');
+            modalContent.classList.add('scale-100', 'opacity-100');
+            
+            document.getElementById('aspirationForm').reset();
+        }
+
+        function hideModal() {
+            const modal = document.getElementById('successModal');
+            const modalContent = document.getElementById('modalContent');
+            
+            modalContent.classList.remove('scale-100', 'opacity-100');
+            modalContent.classList.add('scale-95', 'opacity-0');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }, 300);
+        }
+    </script>
+</body></html>
